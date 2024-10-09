@@ -4,7 +4,7 @@ not_primes = [] #Not Primes: [4, 6, 8, 9, 10, 12, 14, 15]
 for i in range(len(numbers)):
     is_prime = True
     n = numbers[i]
-    if n < 2:
+    if n == 1:
         continue
     else:
         for a in range(2, n):
