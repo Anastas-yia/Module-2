@@ -18,7 +18,3 @@ for i in range(1, 20):
         if num_1 % (i + j) != 0:
             answer = False
 print('Этот набор цифр спасет вам жизнь: ', *result)
-
-
-
-
