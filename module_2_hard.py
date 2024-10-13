@@ -8,13 +8,18 @@ def num_cipher():
 num_1 = num_cipher()
 print('На первом камне выпало число: ', num_1)
 
+num_1_user = int(input('Введите число, выпавшее на камне: '))
+
 result = []
-for i in range(1, 20):
-    for j in range(1, i):
-        if num_1 % (i + j) == 0:
-            result.append(i)
-            result.append(j)
-            answer = True
-        if num_1 % (i + j) != 0:
-            answer = False
-print('Этот набор цифр спасет вам жизнь: ', *result)
+if num_1_user == num_1:
+    for i in range(1, 20):
+        for j in range(1, i):
+            if num_1_user % (i + j) == 0:
+                result.append(i)
+                result.append(j)
+                answer = True
+                if num_1_user % (i + j) != 0:
+                    answer = False
+    print('Этот набор цифр спасет вам жизнь: ', *result)
+else:
+    print('Посмотрите внимательнее на камень! Там другое число!')
